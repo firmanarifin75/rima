@@ -1,11 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ltriiamaa | Profil Pribadi Profesional</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Configuration for professional look -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0070f3', // Blue for accents
+                        'secondary': '#1e293b', // Dark Slate
+                        'background': '#0f172a', // Navy/Dark Blue
+                        'text-light': '#f8fafc',
+                        'text-muted': '#94a3b8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Inter Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Icon library (lucide icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Smooth scrolling for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0070f3;
+            border-radius: 10px;
+        }
+    </style>
 </head>
-<body>
-    rima dan salwa dan adel
+<body class="bg-background text-text-light font-sans">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-background/95 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#home" class="text-2xl font-bold text-primary hover:text-white transition duration-300">ltriiamaa</a>
+                <div class="flex space-x-4">
+                    <a href="#experience" class="text-text-light hover:text-primary transition duration-300 rounded-lg px-3 py-2 text-sm font-medium hidden md:inline-block">Pengalaman</a>
+                    <a href="#skills" class="text-text-light hover:text-primary transition duration-300 rounded-lg px-3 py-2 text-sm font-medium hidden md:inline-block">Keahlian</a>
+                    <a href="#portfolio" class="text-text-light hover:text-primary transition duration-300 rounded-lg px-3 py-2 text-sm font-medium hidden md:inline-block">Portofolio</a>
+                    <a href="#contact" class="text-text-light hover:text-primary transition duration-300 rounded-lg px-3 py-2 text-sm font-medium">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-12">
+
+        <!-- 1. Hero / Identity Section -->
+        <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 text-center">
+            <div class="flex flex-col items-center">
+                <!-- Profile Image Placeholder -->
+                <div class="w-32 h-32 md:w-40 md:h-40 bg-secondary rounded-full border-4 border-primary shadow-xl overflow-hidden mb-6">
+                    <!-- Placeholder for image -->
+                    <img src="https://placehold.co/160x160/0f172a/ffffff?text=ltriiamaa" alt="Foto Profil ltriiamaa" class="w-full h-full object-cover">
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl font-extrabold mb-2 leading-tight">
+                    Halo, Saya <span class="text-primary">ltriiamaa</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-text-muted mb-8">
+                    Desainer UX yang Inovatif &amp; Pengembang Web Penuh Waktu
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#portfolio" class="bg-primary hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
+                        Lihat Portofolio
+                    </a>
+                    <a href="#contact" class="bg-secondary border border-gray-700 hover:bg-gray-700 text-text-light font-semibold py-3 px-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About / Identity Section -->
+        <section id="about" class="bg-secondary py-20">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-10 border-b-2 border-primary pb-2 inline-block mx-auto">Identitas & Profil</h2>
+                <div class="text-lg text-text-muted leading-relaxed space-y-4 text-center">
+                    <p>
+                        Saya adalah seorang profesional yang bersemangat dalam menggabungkan desain yang estetis dengan fungsionalitas kode yang efisien. Dengan pengalaman [Masukkan Jumlah Tahun] tahun di industri teknologi, saya berspesialisasi dalam menciptakan pengalaman digital yang intuitif dan menarik, mulai dari konseptualisasi hingga implementasi.
+                    </p>
+                    <p>
+                        Kekuatan saya terletak pada pemahaman mendalam tentang kebutuhan pengguna dan kemampuan untuk menerjemahkannya ke dalam solusi teknis yang skalabel. Saya selalu mencari tantangan baru untuk memperluas batas kreativitas dan keterampilan teknis saya.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-16 border-b-2 border-primary pb-2 inline-block mx-auto">Pengalaman Kerja</h2>
+
+                <!-- Timeline Container -->
+                <div class="space-y-12 relative before:content-[''] before:absolute before:left-4 before:top-0 before:h-full before:w-1 before:bg-gray-700 md:before:left-1/2 md:before:-translate-x-1/2">
+
+                    <!-- Experience Item 1 -->
+                    <div class="relative pl-8 md:pl-0 md:w-1/2 md:mx-auto md:odd:text-right md:odd:pr-8 md:even:text-left md:even:pl-8">
+                        <!-- Bullet point -->
+                        <div class="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border-4 border-background flex items-center justify-center md:left-1/2 md:-translate-x-1/2">
+                            <i data-lucide="briefcase" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <div class="bg-secondary p-6 rounded-xl shadow-xl hover:shadow-primary/30 transition duration-300 border border-gray-700">
+                            <p class="text-sm text-primary font-semibold mb-1">2022 - Sekarang</p>
+                            <h3 class="text-xl font-bold mb-1">Senior UX/UI Designer</h3>
+                            <p class="text-text-muted">Tech Global Inc., Jakarta</p>
+                            <ul class="list-disc list-inside text-sm mt-3 text-text-muted space-y-1">
+                                <li>Memimpin desain produk untuk platform B2B, meningkatkan kepuasan pengguna sebesar 25%.</li>
+                                <li>Mengelola tim desain yang terdiri dari 5 orang, berfokus pada metodologi Design Thinking.</li>
+                                <li>Melakukan riset pengguna mendalam dan pengujian prototipe.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 2 -->
+                    <div class="relative pl-8 md:pl-0 md:w-1/2 md:mx-auto md:odd:text-right md:odd:pr-8 md:even:text-left md:even:pl-8">
+                        <div class="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border-4 border-background flex items-center justify-center md:left-1/2 md:-translate-x-1/2">
+                            <i data-lucide="briefcase" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <div class="bg-secondary p-6 rounded-xl shadow-xl hover:shadow-primary/30 transition duration-300 border border-gray-700">
+                            <p class="text-sm text-primary font-semibold mb-1">2019 - 2022</p>
+                            <h3 class="text-xl font-bold mb-1">Full-Stack Web Developer</h3>
+                            <p class="text-text-muted">Studio Kreatif Digital</p>
+                            <ul class="list-disc list-inside text-sm mt-3 text-text-muted space-y-1">
+                                <li>Mengembangkan dan memelihara 10+ website klien menggunakan React dan Node.js.</li>
+                                <li>Menerapkan integrasi API pihak ketiga untuk layanan pembayaran dan analitik.</li>
+                                <li>Mengoptimalkan kinerja situs web, mengurangi waktu muat hingga 40%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Education Section -->
+        <section id="education" class="py-20 bg-secondary">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 border-b-2 border-primary pb-2 inline-block mx-auto">Riwayat Pendidikan</h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Education Item 1 -->
+                    <div class="p-6 bg-background rounded-xl shadow-lg border border-gray-800 flex items-start space-x-4">
+                        <i data-lucide="graduation-cap" class="w-8 h-8 text-primary mt-1 flex-shrink-0"></i>
+                        <div>
+                            <p class="text-lg font-bold">S2 Ilmu Komputer (M. Kom)</p>
+                            <p class="text-text-muted">Universitas Teknologi Nasional</p>
+                            <p class="text-sm text-gray-500 mt-1">2018 - 2020 | IPK 3.85</p>
+                            <p class="text-sm mt-2">Fokus pada Kecerdasan Buatan dan Pengembangan Perangkat Lunak Skala Besar.</p>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="p-6 bg-background rounded-xl shadow-lg border border-gray-800 flex items-start space-x-4">
+                        <i data-lucide="book-open" class="w-8 h-8 text-primary mt-1 flex-shrink-0"></i>
+                        <div>
+                            <p class="text-lg font-bold">S1 Desain Komunikasi Visual (S.Sn)</p>
+                            <p class="text-text-muted">Institut Seni Kreatif</p>
+                            <p class="text-sm text-gray-500 mt-1">2014 - 2018 | IPK 3.60</p>
+                            <p class="text-sm mt-2">Mempelajari prinsip desain visual, tipografi, dan media interaktif.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 border-b-2 border-primary pb-2 inline-block mx-auto">Keahlian (Skills)</h2>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Skill Item -->
+                    <div class="flex items-center space-x-3 p-4 bg-secondary rounded-lg shadow-md border border-gray-700 hover:border-primary transition duration-300">
+                        <i data-lucide="layout-grid" class="w-5 h-5 text-primary"></i>
+                        <span class="text-text-light font-medium">UI/UX Design</span>
+                    </div>
+                    <div class="flex items-center space-x-3 p-4 bg-secondary rounded-lg shadow-md border border-gray-700 hover:border-primary transition duration-300">
+                        <i data-lucide="figma" class="w-5 h-5 text-primary"></i>
+                        <span class="text-text-light font-medium">Figma & Sketch</span>
+                    </div>
+                    <div class="flex items-center space-x-3 p-4 bg-secondary rounded-lg shadow-md border border-gray-700 hover:border-primary transition duration-300">
+                        <i data-lucide="code" class="w-5 h-5 text-primary"></i>
+                        <span class="text-text-light font-medium">JavaScript (ES6+)</span>
+                    </div>
+                    <div class="flex items-center space-x-3 p-4 bg-secondary rounded-lg shadow-md border border-gray-700 hover:border-primary transition duration-300">
+                        <i data-lucide="package-open" class="w-5 h-5 text-primary"></i>
+                        <span class="text-text-light font-medium">React & Next.js</span>
+                    </div>
+                    <div class="flex items-center space-x-3 p-4 bg-secondary rounded-lg shadow-md border border-gray-700 hover:border-primary transition duration-300">
+                        <i data-lucide="server" class="w-5 h-5 text-primary"></i>
+                        <span class="text-text-light font-medium">Node.js & Express</span>
+                    </div>
+                    <div class="flex items-center space-x-3 p-4 bg-secondary rounded-lg shadow-md border border-gray-700 hover:border-primary transition duration-300">
+                        <i data-lucide="database" class="w-5 h-5 text-primary"></i>
+                        <span class="text-text-light font-medium">PostgreSQL/MongoDB</span>
+                    </div>
+                    <div class="flex items-center space-x-3 p-4 bg-secondary rounded-lg shadow-md border border-gray-700 hover:border-primary transition duration-300">
+                        <i data-lucide="git-branch" class="w-5 h-5 text-primary"></i>
+                        <span class="text-text-light font-medium">Git & GitHub</span>
+                    </div>
+                    <div class="flex items-center space-x-3 p-4 bg-secondary rounded-lg shadow-md border border-gray-700 hover:border-primary transition duration-300">
+                        <i data-lucide="cpu" class="w-5 h-5 text-primary"></i>
+                        <span class="text-text-light font-medium">Arsitektur Cloud</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-secondary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 border-b-2 border-primary pb-2 inline-block mx-auto">Portofolio Pilihan</h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-background rounded-xl overflow-hidden shadow-xl border border-gray-800 hover:ring-2 hover:ring-primary transition duration-300">
+                        <img src="https://placehold.co/600x400/1e293b/ffffff?text=Proyek+E-commerce" alt="Proyek E-commerce" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Platform E-commerce Skala Besar</h3>
+                            <p class="text-text-muted text-sm mb-4">Pengembangan penuh (Full-stack) platform belanja online yang menangani jutaan transaksi per bulan.</p>
+                            <span class="inline-block bg-primary/20 text-primary text-xs font-medium px-3 py-1 rounded-full">React, Node.js, MongoDB</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="bg-background rounded-xl overflow-hidden shadow-xl border border-gray-800 hover:ring-2 hover:ring-primary transition duration-300">
+                        <img src="https://placehold.co/600x400/1e293b/ffffff?text=Aplikasi+Mobile" alt="Aplikasi Mobile" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Aplikasi Mobile Kesehatan (Wellness)</h3>
+                            <p class="text-text-muted text-sm mb-4">Desain dan pengembangan aplikasi mobile (iOS/Android) untuk pelacakan kesehatan dan kebugaran.</p>
+                            <span class="inline-block bg-primary/20 text-primary text-xs font-medium px-3 py-1 rounded-full">Figma, React Native, UI/UX</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="bg-background rounded-xl overflow-hidden shadow-xl border border-gray-800 hover:ring-2 hover:ring-primary transition duration-300">
+                        <img src="https://placehold.co/600x400/1e293b/ffffff?text=Dashboard+Analitik" alt="Dashboard Analitik" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Dashboard Analitik Data Real-Time</h3>
+                            <p class="text-text-muted text-sm mb-4">Mendesain dashboard interaktif untuk memvisualisasikan data perusahaan secara real-time.</p>
+                            <span class="inline-block bg-primary/20 text-primary text-xs font-medium px-3 py-1 rounded-full">Vue.js, D3.js, Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-flex items-center text-primary hover:text-blue-400 font-semibold transition duration-300">
+                        Lihat Semua Proyek
+                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 border-b-2 border-primary pb-2 inline-block mx-auto">Hubungi Saya</h2>
+                <p class="text-center text-text-muted mb-8">
+                    Tertarik berkolaborasi dalam proyek Anda atau sekadar ingin menyapa? Kirimkan pesan!
+                </p>
+
+                <div class="bg-secondary p-8 rounded-xl shadow-2xl border border-gray-700">
+                    <form action="#" method="POST" id="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-text-light mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg bg-background border border-gray-700 focus:border-primary focus:ring-primary outline-none">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-text-light mb-2">Alamat Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg bg-background border border-gray-700 focus:border-primary focus:ring-primary outline-none">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-text-light mb-2">Pesan Anda</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded-lg bg-background border border-gray-700 focus:border-primary focus:ring-primary outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-600 text-white font-semibold py-3 rounded-xl transition duration-300 transform hover:scale-[1.01]">
+                            Kirim Pesan
+                        </button>
+                    </form>
+
+                    <!-- Contact Info / Social Links -->
+                    <div class="mt-8 pt-6 border-t border-gray-700 text-center">
+                        <p class="text-text-muted mb-4">Atau, temukan saya di:</p>
+                        <div class="flex justify-center space-x-6">
+                            <a href="https://linkedin.com/in/ltriiamaa" target="_blank" class="text-text-light hover:text-primary transition duration-300">
+                                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                            </a>
+                            <a href="https://github.com/ltriiamaa" target="_blank" class="text-text-light hover:text-primary transition duration-300">
+                                <i data-lucide="github" class="w-6 h-6"></i>
+                            </a>
+                            <a href="mailto:emailanda@contoh.com" class="text-text-light hover:text-primary transition duration-300">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Simple form submission message handler (instead of alert) -->
+                    <div id="status-message" class="mt-4 p-3 bg-green-500/20 text-green-400 rounded-lg text-center hidden">
+                        Pesan Anda berhasil terkirim!
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary mt-12 py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-text-muted text-sm">
+            <p>&copy; 2025 ltriiamaa. Hak Cipta Dilindungi. Dibuat dengan Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <!-- Script to initialize icons and handle simple form submission -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Simple form submission handler (to prevent page reload without using alert())
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop the form from submitting normally
+            
+            const statusMessage = document.getElementById('status-message');
+            
+            // In a real application, you would send data to a backend server here.
+            // For this template, we just show a success message.
+            
+            statusMessage.textContent = 'Terima kasih, pesan Anda sudah kami terima!';
+            statusMessage.classList.remove('hidden', 'bg-red-500/20', 'text-red-400');
+            statusMessage.classList.add('bg-green-500/20', 'text-green-400');
+            
+            // Clear the form after a short delay
+            setTimeout(() => {
+                event.target.reset();
+                statusMessage.classList.add('hidden');
+            }, 3000); 
+        });
+
+    </script>
 </body>
 </html>
